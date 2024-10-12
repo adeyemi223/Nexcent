@@ -1,0 +1,525 @@
+/*============ Universal-Selector =================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* ============Root-Elements============== */
+:root {
+  --primary-color: #237d31;
+  --lightPrimary: #43a046;
+  --secondary-color: #263238;
+  --bg-color: #f5f7fa;
+  --font-color: #263238;
+  --font-color2: #f5f7fa;
+  --foooterFont-color: #3e464b;
+  --footer2-color: #cbd0d8;
+}
+
+.sticky {
+  background-color: var(--bg-color);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+}
+
+#header {
+  width: 100%;
+  padding: 1.4% 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+}
+
+.logo_Container {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.logo_Container h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--font-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 3rem;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--font-color);
+  position: relative;
+}
+
+ul li a::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.5s ease-in-out;
+}
+
+ul li a:hover::after {
+  width: 100%;
+}
+
+.btnsCon {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.btns {
+  width: 120px;
+  height: 40px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--font-color2);
+  cursor: pointer;
+}
+
+.btns:hover {
+  background-color: var(--lightPrimary);
+}
+
+.special {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.special:hover {
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  border: 2px var(--primary-color) solid;
+  border-radius: 6px;
+}
+
+.menuIcon {
+  display: none;
+}
+
+.menuIcon i {
+  color: var(--font-color);
+  font-size: 30px;
+}
+
+/* ================header section END======== */
+
+/* default section padding */
+section {
+  padding: 5% 12%;
+}
+
+span {
+  color: var(--lightPrimary);
+}
+
+#Home {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color);
+}
+
+.homeflex1,
+.homeflex2 {
+  width: 100%;
+}
+
+.homeflex1 h1 {
+  font-size: 3.8rem;
+  line-height: 70px;
+  font-weight: 600;
+  color: var(--font-color);
+  margin-bottom: 1.3rem;
+}
+
+.homeflex1 p {
+  font-size: 1rem;
+  color: var(--font-color);
+  margin-bottom: 2rem;
+}
+
+.homeflex2 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+/* =============home section END=========*/
+
+.clients_ServiceCon {
+  text-align: center;
+}
+
+.clients_ServiceCon h2 {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  margin-bottom: 1rem;
+}
+
+.clients_ServiceCon p {
+  font-size: 1rem;
+  color: var(--font-color);
+  margin: 2rem;
+}
+
+.Service_FlexiconsCon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+
+.ServiceGridHeader {
+  text-align: center;
+}
+
+.ServiceGridHeader h2 {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  margin-bottom: 1rem;
+}
+
+.ServiceGridHeader p {
+  font-size: 1rem;
+  color: var(--font-color);
+}
+
+.mainServiceflexCon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.flex1 {
+  width: 300px;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex1 h4 {
+  font-size: 1.4rem;
+  color: var(--font-color);
+}
+
+.flex1 p {
+  color: var(--font-color);
+}
+
+/* ==============Service END============ */
+
+#Feature {
+  background-color: var(--bg-color);
+}
+
+.featureflexCon {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.featureFlex1 h2 {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  margin-bottom: 1rem;
+}
+
+small {
+  font-size: 1rem;
+  color: var(--font-color);
+}
+
+.FFgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.FFflex1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.FFflex1 i {
+  font-size: 50px;
+  color: var(--primary-color);
+}
+
+.FFinner {
+  display: flex;
+  flex-direction: column;
+}
+
+.FFinner strong {
+  font-size: 2rem;
+  color: var(--font-color);
+}
+
+#featureGridIllustration {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 6rem;
+}
+
+.featureimg img {
+  width: 100%;
+}
+
+.featuretext h2 {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  margin-bottom: 2rem;
+}
+
+.featuretext p {
+  color: var(--font-color);
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 25px;
+  margin-bottom: 2rem;
+}
+
+/* ====================featureGridIllustration END============ */
+
+.productMarketHeader {
+  text-align: center;
+}
+
+.productMarketHeader h3 {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  margin-bottom: 1rem;
+}
+
+.productMarketHeader p {
+  line-height: 25px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--font-color);
+}
+
+.productFlexImage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.1rem;
+  margin-top: 1rem;
+}
+
+.productImage1 {
+  width: 100%;
+  position: relative;
+}
+
+.productImage1 img {
+  width: 100%;
+}
+
+.text {
+  width: 80%;
+  height: 23vh;
+  background: var(--bg-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 10px;
+  position: absolute;
+  left: 10%;
+  top: 70%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.text p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--font-color);
+  line-height: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.text a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* ====================product END============== */
+
+#Testimonial {
+  background: var(--bg-color);
+  margin-top: 8%;
+}
+
+.testimonialText {
+  width: 100%;
+  text-align: center;
+}
+
+.testimonialText h1 {
+  font-size: 4rem;
+  color: var(--font-color);
+  margin-bottom: 1rem;
+}
+
+.btnIcon {
+  width: 12%;
+  color: var(--font-color2);
+}
+
+.btnIcon img {
+  color: #fff;
+}
+
+/* ================Testimonial END============ */
+
+#footer {
+  padding: 2% 12%;
+  background-color: var(--secondary-color);
+}
+
+.footerFlexCon {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footerFlex1 {
+  flex: 20%;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.footerLogo h1 {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.footerCopyright p {
+  color: var(--footer2-color);
+  font-weight: normal;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 35px;
+}
+
+.footerMedia {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.footerMedia img {
+  padding: 0.75rem;
+  background-color: #3e464b;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footerMedia img:hover {
+  background-color: #5b6f7c;
+  transition: 0.5s ease-in-out;
+  box-shadow: rgba(127, 127, 150, 0.2) 0px 7px 29px 0px;
+}
+
+.footerFlex2 {
+  flex: 30%;
+}
+
+.footerFlex2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.footerLinks ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  cursor: text;
+  color: var(--footer2-color);
+}
+
+.footerLinks ul li {
+  list-style: none;
+}
+
+.footerLinks ul li:first-child {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--font-color2);
+}
+
+.footerUpdates h1 {
+  color: var(--font-color2);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footerUpdates input {
+  width: 100%;
+  height: 5.5vh;
+  padding-left: 0.9rem;
+  padding-right: 0.9rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background-color: var(--foooterFont-color);
+  color: var(--font-color2);
+}
+
+.footerUpdates input::placeholder {
+  color: var(--footer2-color);
+  font-size: 1rem;
+}
